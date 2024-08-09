@@ -20,10 +20,11 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, confu
 def classifier(cls, params, title):
     cv = StratifiedKFold(n_splits=3, shuffle=True, random_state=42)
     # Randomize Grid Search
-    n_iter_search = 20
+    n_iter_search = 30
     model = RandomizedSearchCV(cls,
                                param_distributions=params,
                                n_iter=n_iter_search,
+                               random_state=42,
                                scoring="recall",
                                cv=cv,
                                n_jobs=6,
