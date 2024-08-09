@@ -45,7 +45,7 @@ def classifier(cls, params, title):
     print('Precision score: {:.2f}'.format(precision_score(y_test, y_predict)))
     print('Recall score: {:.2f}'.format(recall_score(y_test, y_predict)))
 
-    # visualize
+    # Visualize
     fig, [ax1, ax2] = plt.subplots(1, 2, figsize=(10, 5))
     fig.suptitle(title)
 
